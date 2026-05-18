@@ -2,7 +2,8 @@ package PatternPrintingProblem;
 
 public class NumberTriangle {
     static void main() {
-        for (int i = 1; i < 6; i++){
+        int n = 5;
+        for (int i = 1; i <= n; i++){
             for (int j = 1; j <= i; j++){
                 System.out.print(j+" ");
             }

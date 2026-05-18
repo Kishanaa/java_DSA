@@ -1,12 +1,14 @@
-public class Reverse_linkedList {
+package OldCodes;
+
+public class Linked_list {
     // head of the linked list
     Node head;
 
     private int size;
-    Reverse_linkedList(){
+    Linked_list(){
         this.size=0;
     }
-    //    Node
+//    Node
     class Node{
         String data;
         Node next;
@@ -18,7 +20,7 @@ public class Reverse_linkedList {
     }
 
 
-    //    method to add a new node at the beginning of the linked list
+//    method to add a new node at the beginning of the linked list
     public void addFirst(String data){
         Node newNode=new Node(data);
         if (head==null){
@@ -29,7 +31,7 @@ public class Reverse_linkedList {
         head=newNode;
     }
 
-    //    method to add a new node at the end of the linked list
+//    method to add a new node at the end of the linked list
     public void addLast(String data){
         Node newNode=new Node(data);
         if (head==null){
@@ -43,7 +45,7 @@ public class Reverse_linkedList {
         }
         currNode.next=newNode;
     }
-    //    print
+//    print
     public void printList(){
         if (head==null){
             System.out.println("List is empty");
@@ -57,37 +59,52 @@ public class Reverse_linkedList {
         System.out.println("NULL");
     }
 
-//    method to Reversing the linked list
-    public void reverseIterate(){
-        if (head==null || head.next==null){
+//    delete first
+    public void deleteFirst(){
+        if (head==null){
+            System.out.println("List is empty");
+            return;
+        }
+        size--;
+        head=head.next;
+    }
+
+//    delete last
+    public void deleteLast(){
+        if (head==null){
+            System.out.println("List is empty");
             return;
         }
 
-        Node prevNode=head;
-        Node currNode=head.next;
-        while (currNode!=null){
-            Node nextNode=currNode.next;
-            currNode.next=prevNode;
-
-//            Update
-            prevNode=currNode;
-            currNode=nextNode;
+        size--;
+        if (head.next==null){
+            return;
         }
-        head.next=null;
-        head=prevNode;
+        Node secondLast=head;
+        Node lastNode=head.next;
+        while (lastNode.next!=null){
+            lastNode=lastNode.next;
+            secondLast=secondLast.next;
+        }
+        secondLast.next=null;
+    }
+//    get Size
+    public int getSize(){
+        return size;
     }
 
     public static void main(String[] args) {
-        Reverse_linkedList list=new Reverse_linkedList();
-        list.addLast("1");
-        list.addLast("2");
-        list.addLast("3");
-        list.addLast("4");
+        Linked_list list=new Linked_list();
+        list.addFirst("a");
+        list.addFirst("is");
         list.printList();
-
-        list.reverseIterate();
+        list.addLast("bad");
         list.printList();
-
+        list.deleteLast();
+        list.printList();
+//        list.deleteFirst();
+//        list.printList();
+        System.out.println(list.getSize());
 
     }
 }

@@ -1,34 +1,26 @@
-public class stack_Linked_list {
-    static class Node{
-        int data;
-        Node next;
-        public Node(int data){
-            this.data=data;
-            this.next=null;
-        }
-    }
+package OldCodes;
+
+import java.util.ArrayList;
+
+public class Stack_arrayList {
     static class Stack{
-        public static Node head;
+        static ArrayList<Integer> list=new ArrayList<>();
         public static boolean isEmpty(){
-            return head==null;
+            return list.size()==0;
         }
 
+//        push
         public static void push(int data){
-            Node newNode=new Node(data);
-            if (isEmpty()){
-                head=newNode;
-                return;
-            }
-            newNode.next=head;
-            head=newNode;
+            list.add(data);
         }
 
         public static int pop(){
             if (isEmpty()){
                 return -1;
             }
-            int top=head.data;
-            head=head.next;
+//            list.size()-1 means last element
+            int top=list.get(list.size()-1);
+            list.remove(list.size()-1);
             return top;
         }
 
@@ -36,7 +28,7 @@ public class stack_Linked_list {
             if (isEmpty()){
                 return -1;
             }
-            return head.data;
+            return list.get(list.size())-1;
         }
     }
 
