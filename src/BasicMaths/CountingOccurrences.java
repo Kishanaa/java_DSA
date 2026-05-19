@@ -1,3 +1,5 @@
+package BasicMaths;
+
 public class CountingOccurrences {
     static void main() {
         int a = 15153435;

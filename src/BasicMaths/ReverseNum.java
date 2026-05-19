@@ -1,3 +1,5 @@
+package BasicMaths;
+
 public class ReverseNum {
     static void main() {
         int a = 13176;

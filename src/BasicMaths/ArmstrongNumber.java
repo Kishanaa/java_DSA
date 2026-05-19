@@ -1,4 +1,4 @@
-/*
+package BasicMaths;/*
 Q) Check Armstrong numbers from 100 to 999.
     Difficulty level - Easy
  */

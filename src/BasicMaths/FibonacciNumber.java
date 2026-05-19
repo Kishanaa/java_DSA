@@ -1,3 +1,5 @@
+package BasicMaths;
+
 public class FibonacciNumber {
     static void main(String[] args) {
         int a = 0;
