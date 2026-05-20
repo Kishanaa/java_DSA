@@ -7,7 +7,7 @@ public class PerfectNumber {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter Number");
+        System.out.print("Enter Number: ");
 //        perfect numbers 6,28,...
         int n = sc.nextInt();
         int sum = 1;
@@ -16,9 +16,9 @@ public class PerfectNumber {
 //                i se n ko perfectly divide kar dia hai
 //                1st factor i
 //                2nd factor n/i
-                int firstFactor = i;
+//                int firstFactor = i;
                 int secondFactor = n/i;
-                sum = sum + firstFactor + secondFactor;
+                sum = sum + i + secondFactor;
             }
         }
         if (sum==n){
