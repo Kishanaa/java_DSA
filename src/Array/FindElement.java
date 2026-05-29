@@ -13,6 +13,7 @@ public class FindElement {
         for (int i = 0; i < arr.length; i++){
             if (num == arr[i]){
                 System.out.println("Element found at "+i+" index");
+                return;
             }
         }
     }
