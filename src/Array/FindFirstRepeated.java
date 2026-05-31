@@ -13,9 +13,8 @@ public class FindFirstRepeated {
         for (int i : arr){
             rep.put(i, rep.getOrDefault(i,0)+1);
         }
-        for (int i = 0; i < arr.length; i++){
-            int temp = arr[i];
-            if (rep.get(temp)>1){
+        for (int temp : arr) {
+            if (rep.get(temp) > 1) {
                 return temp;
             }
         }
