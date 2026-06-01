@@ -7,7 +7,7 @@ package Array;
     Difficulty level : Easy
  */
 
-public class MaximumSubarray {
+public class MaximumSumContiguousSubarray {
     private static void subarray(int[] arr){
         int maxSum = Integer.MIN_VALUE, sum =0;
 
