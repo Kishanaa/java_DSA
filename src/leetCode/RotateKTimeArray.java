@@ -1,5 +1,10 @@
 package leetCode;
 
+/*
+    TC : O(n)
+    SC : O(1)
+ */
+
 public class RotateKTimeArray {
     public static void rotate(int[] nums, int k) {
         k = k % nums.length;
