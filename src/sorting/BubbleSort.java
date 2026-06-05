@@ -15,7 +15,7 @@ public class BubbleSort {
         }
     }
     static void main() {
-        int[] arr = {5,4,1,2,6};
+        int[] arr = {5,4,1,2,6,1};
         bubble(arr);
         for (int num : arr){
             System.out.print(num + " ");
