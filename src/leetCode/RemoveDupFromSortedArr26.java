@@ -4,7 +4,7 @@ package leetCode;
     TC : O(n)
     SC : O(1)
  */
-public class RemoveDupFromSortedArr {
+public class RemoveDupFromSortedArr26 {
     public static int removeDuplicates(int[] nums) {
         int n = nums.length;
         int i = 0, j = 1;
