@@ -21,7 +21,7 @@ public class ReverseWords151 {
             while (starting >= 0 && st.charAt(starting) != ' '){
                 starting--;
             }
-            newSt.append(st.substring(starting+1,ending+1));
+            newSt.append(st.subSequence(starting+1,ending+1));
 
             // remove spaces
             while (starting >= 0 && st.charAt(starting)==' '){
@@ -37,6 +37,6 @@ public class ReverseWords151 {
     }
     static void main() {
         String st = "  hello world  ";
-        System.out.println(reverseWords(st));;
+        System.out.println(reverseWords(st));
     }
 }
