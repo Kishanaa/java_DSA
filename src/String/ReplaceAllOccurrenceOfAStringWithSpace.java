@@ -2,12 +2,19 @@ package String;
 
 public class ReplaceAllOccurrenceOfAStringWithSpace {
     static String replace(String s, String sub){
+        StringBuilder newString = new StringBuilder();
 
-        s = s.replace(sub," ");
+        int stringN = s.length() - 1;
+        int subStringN = sub.length() - 1;
+        int stringI = 0;
 
-        s = s.trim();
+        while(stringI <= stringN){
 
-        return s;
+
+        }
+
+
+        return "ss";
     }
     static void main() {
         String s = "LIELIEILIEAMLIECOOL";
