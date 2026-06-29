@@ -12,7 +12,7 @@ public class FibonacciNumber509 {
         return fib(n - 1) + fib(n - 2);
     }
     static void main() {
-        int num = 5;
+        int num = 6;
         System.out.println(fib(num));
     }
 }
