@@ -22,7 +22,7 @@ public class BinarySearch {
         return -1;
     }
     static void main() {
-        int[] arr = {10,20,30,40,50,60,70,80,99};
+        int[] arr = {10,20,30,40,50,60,70,80,99,100};
         System.out.println("Index: " + binary(arr,80));;
     }
 }
