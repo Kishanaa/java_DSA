@@ -4,18 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TriangleProblem {
-    static int minimumTotal(List<List<Integer>> triangle, int sum, int r, int c) {
+    static int minimumTotal(List<List<Integer>> triangle, int r, int c) {
 
-        if (r >= triangle.size()){
-            return sum;
+        if (r >= triangle.size()-1){
+            return triangle.get(r).get(c);
         }
 
-        int ans = Integer.MAX_VALUE;
-        int include1 = minimumTotal(triangle, sum + triangle.get(r).get(c), r+1, c);
-        ans = Math.min(ans, include1);
-        int include2 = minimumTotal(triangle, sum, r+1, c+1);
-        ans = Math.min(ans, include2);
+        int include1 = minimumTotal(triangle,  r+1, c);
+        int include2 = minimumTotal(triangle, r+1, c+1);
 
+//        first wale ko ham add kar denge baaki rec sabhal lega
+        int ans = triangle.get(r).get(c) + Math.min(include1,include2);
 
         return ans;
 
@@ -44,7 +43,7 @@ public class TriangleProblem {
         row4.add(3);
         triangle.add(row4);
 
-        System.out.println(minimumTotal(triangle,0, 0,0));
+        System.out.println(minimumTotal(triangle,0,0));
 
     }
 }
